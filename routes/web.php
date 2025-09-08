@@ -21,9 +21,17 @@ Route::middleware([
 //Admin routes and middleware
 Route::middleware([Admin::class])->group(function(){
 
+    //Route::get('/admin', function () {
+    //return view('index');
+//});
 });
 
 //Lawyers routes and middleware
 Route::middleware([Lawyers::class])->group(function(){
 
 });
+
+Route::get('/adminpanel', function () {
+    return view('admin.index');
+});
+
